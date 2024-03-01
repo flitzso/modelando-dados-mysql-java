@@ -16,7 +16,7 @@ public class MyFavoriteForums {
 
     @ManyToOne
     @JoinColumn(name = "forum_id")
-    private CreateMyForum forumId;
+    private NewForum forumId;
 
     // Getters and setters
 }

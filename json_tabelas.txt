@@ -1,0 +1,37 @@
+NewForum:
+
+{
+  "nameForum": "Exemplo de Fórum",
+  "categories": "Tecnologia",
+  "description": "Um fórum sobre programação e tecnologia.",
+  "avatar": "https://exemplo.com/avatar.png"
+}
+
+Client:
+
+{
+  "firstName": "João",
+  "lastName": "Silva",
+  "email": "joao@example.com",
+  "password": "senha123",
+  "birthday": "1990-05-15",
+  "gender": "Masculino"
+}
+
+Profile:
+
+http://localhost:8085/api/v1/profiles/create?clientId=1
+
+{
+  "client": {
+    "id": 1,
+    "name": "Nome do Cliente",
+    "email": "cliente@example.com",
+    "phone": "123456789",
+    "address": "Endereço do Cliente"
+  },
+  "avatar": "https://example.com/avatar.jpg",
+  "bannerAvatar": "https://example.com/banner.jpg",
+  "country": "Brasil",
+  "bios": "Este é um exemplo de biografia."
+}

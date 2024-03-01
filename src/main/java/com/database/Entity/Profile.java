@@ -8,7 +8,8 @@ import jakarta.persistence.*;
 public class Profile {
 
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
@@ -26,5 +27,47 @@ public class Profile {
     @Column(columnDefinition = "TEXT")
     private String bios;
 
-    // Getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getBannerAvatar() {
+        return bannerAvatar;
+    }
+
+    public void setBannerAvatar(String bannerAvatar) {
+        this.bannerAvatar = bannerAvatar;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getBios() {
+        return bios;
+    }
+
+    public void setBios(String bios) {
+        this.bios = bios;
+    }
 }
